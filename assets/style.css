@@ -1,4 +1,12 @@
-* {
+*,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
     font-family: Fredoka One;
     font-size: 38px;
     font-style: normal;
