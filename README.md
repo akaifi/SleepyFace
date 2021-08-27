@@ -1,4 +1,4 @@
-![Alt text](https://raw.githubusercontent.com/akaifi/SleepyFace/main/assets/HachathonX/akChar.svg)
+![Alt text](https://raw.githubusercontent.com/akaifi/SleepyFace/main/images/SFlogo.svg)
 # SleepyFace
 A quick and Hack-athony Game 
 
