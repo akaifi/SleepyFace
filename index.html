@@ -71,6 +71,19 @@
         <section data-ui-include="pages/about" layout="column top-center"></section>
 
     </main>
+    <div class="flex-container">
+
+
+
+        <div class="scores"></div>
+
+
+        <div class="sNumber"></div>
+        <div class="user"></div>
+
+        <div class="faces"></div>
+
+    </div>
     <h1>SleepyFace</h1>
     <!-- The footer with toolbar buttons -->
     <footer data-ui-include="layout/footer" data-ui-options="options.footerBar" data-ui-field="footer-bar"></footer>
@@ -87,6 +100,28 @@
     <div id='installer'>
         <button class='button'>Install</button>
     </div>
+
+    <div class="form-popup" id="myForm">
+        <!-- <form action="/action_page.php" class="form-container"> -->
+        <h1>Start</h1>
+
+        <label for="Name"><b>Name</b></label>
+        <input type="text" placeholder="Name" name="Name" required>
+
+        <button type="submit" class="btn cancel" onclick="closeForm();">Close</button>
+        </form>
+    </div>
+    <script>
+        /* function openForm() {
+                    document.getElementById("myForm").style.display = "block";
+                } */
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
     <script src=/scripts/main.min.js></script>
     <script src=/scripts/comlink.global.js></script>
     <script src=/scripts/messagechanneladapter.global.js></script>
