@@ -52,6 +52,7 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    align-content: space-around;
 }
 
 .row {
@@ -72,8 +73,19 @@ body {
     display: flex;
     height: 80%;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    align-content: space-around;
+    gap: 2%;
+}
+
+.face1,
+.face2,
+.face3,
+.face4 {
+    /* padding: 2%; */
+    /* margin: 2%; */
+    margin: 10px 0 0 10px;
 }
 
 #container {
@@ -141,12 +153,16 @@ body {
         width: 20px;
         width: 5vmin;
         height: 5vmin;
+        background-color: #000;
+        border-radius: 50%
     }
     to {
         width: 18.4px;
         height: 21.6px;
         width: 4.6vmin;
         height: 5.4vmin;
+        background-color: #000;
+        border-radius: 50%
     }
 }
 
@@ -156,12 +172,16 @@ body {
         height: 20px;
         width: 5vmin;
         height: 5vmin;
+        background-color: #000;
+        border-radius: 50%
     }
     to {
         width: 18.4px;
         height: 21.6px;
         width: 4.6vmin;
         height: 5.4vmin;
+        background-color: #000;
+        border-radius: 50%
     }
 }
 
@@ -252,13 +272,14 @@ body {
 }
 
 .horn .inner .center {
-    background-color: #000;
+    background-color: transparent;
     opacity: .9;
-    border-radius: 50%
+    /* border-radius: 50% */
+    border-bottom: #000 solid 3px;
 }
 
 .horn .inner .betweeneyes {
-    width: 50px;
+    width: 20%;
 }
 
 .horn.horning {
