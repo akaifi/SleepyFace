@@ -52,84 +52,89 @@
 <!-- load the 'header_auto_hide' on the body -->
 
 <body>
+    <div id="boody">
+        <!-- The header with profile icon button for opening the drawer layout (side menu panel) -->
+        <header data-ui-include="layout/header" data-ui-options="options.headerBar" data-ui-field="header-bar"></header>
 
-    <!-- The header with profile icon button for opening the drawer layout (side menu panel) -->
-    <header data-ui-include="layout/header" data-ui-options="options.headerBar" data-ui-field="header-bar"></header>
-
-    <main data-ui-field="pages">
-        <div id='installer'>
-            <button class='button'>Install</button>
-        </div>
-
-        <!-- HOME -->
-        <section data-ui-include="pages/home"></section>
-
-        <!-- SEARCH -->
-        <section data-ui-include="pages/search"></section>
-
-        <!-- NOTIFICATIONS -->
-        <section data-ui-include="pages/notifications"></section>
-
-        <!-- ABOUT -->
-        <section data-ui-include="pages/about" layout="column top-center"></section>
-
-    </main>
-    <div class="flex-container">
-
-
-
-        <div class="scores">
-            <h1>Scoure</h1>
-        </div>
-
-
-        <div class="sNumber"></div>
-        <div class="user" id="showUser"></div>
-
-        <div class="faces">
-            <div id='container'>
-                <div id='airhorn'>
-                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
-                        <div class='inner'>
-                            <div class='center'></div>
-                        </div>
-                    </div>
-                </div>
+        <main data-ui-field="pages">
+            <div id='installer'>
+                <button class='button'>Install</button>
             </div>
-            <div id='container'>
-                <div id='airhorn'>
-                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
-                        <div class='inner'>
-                            <div class='center'></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id='container'>
-                <div id='airhorn'>
-                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
-                        <div class='inner'>
-                            <div class='center'></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id='container'>
-                <div id='airhorn'>
-                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
-                        <div class='inner'>
-                            <div class='center'></div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- HOME -->
+            <section data-ui-include="pages/home"></section>
+
+            <!-- SEARCH -->
+            <section data-ui-include="pages/search"></section>
+
+            <!-- NOTIFICATIONS -->
+            <section data-ui-include="pages/notifications"></section>
+
+            <!-- ABOUT -->
+            <section data-ui-include="pages/about" layout="column top-center"></section>
+
+        </main>
+        <div class="flex-container">
+
+
+
+            <div class="scores">
+                <h1>Scoure</h1>
             </div>
 
 
-        </div>
+            <div class="sNumber">
+                <input type="text" placeholder="NoN" name="scoNum" id="scoNum" readonly style="text-align: center;background-color: rgba(255, 255, 255, 0.5);border-radius: .2rem;border-color:rgba(155, 155, 155, 0.2);border-style: solid;">
+            </div>
+            <div class="user" id="showUser"></div>
 
-    </div>
-    <h1>SleepyFace</h1>
-    <!-- <div id='container'>
+            <div class="faces">
+                <div id='container'>
+                    <div class="row">
+                        <div class="column">
+                            <div id='airhorn'>
+                                <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                                    <div class='inner'>
+                                        <div class='center'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div id='airhorn'>
+                                <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                                    <div class='inner'>
+                                        <div class='center'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div id='airhorn'>
+                                <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                                    <div class='inner'>
+                                        <div class='center'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div id='airhorn'>
+                                <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                                    <div class='inner'>
+                                        <div class='center'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h1>SleepyFace</h1>
+            <!-- <div id='container'>
         <div id='airhorn'>
             <div class='horn' role='button' aria-pressed='false' tabindex='1'>
                 <div class='inner'>
@@ -138,29 +143,30 @@
             </div>
         </div>
     </div> -->
-    <!-- The footer with toolbar buttons -->
-    <footer data-ui-include="layout/footer" data-ui-options="options.footerBar" data-ui-field="footer-bar"></footer>
+            <!-- The footer with toolbar buttons -->
+            <footer data-ui-include="layout/footer" data-ui-options="options.footerBar" data-ui-field="footer-bar"></footer>
 
-    <!-- The DrawerLayout for side menu panel -->
-    <div data-ui-load="@lib/controllers/drawer_layout" data-ui-options="options.drawerLayout" class="drawer" draggable="false">
-        <!-- Add Navigation Drawer content -->
-        <div data-ui-include="shared/main_menu"></div>
-    </div>
+            <!-- The DrawerLayout for side menu panel -->
+            <div data-ui-load="@lib/controllers/drawer_layout" data-ui-options="options.drawerLayout" class="drawer" draggable="false">
+                <!-- Add Navigation Drawer content -->
+                <div data-ui-include="shared/main_menu"></div>
+            </div>
 
-    <noscript>
+            <noscript>
         Turn on JavaScript to access this site content.
     </noscript>
+        </div>
+    </div>
 
+    <div class="form-popup form-container" id="myForm">
+        <!-- <form class="form-container"> -->
+        <h1>What's your name?</h1>
 
-    <div class="form-popup" id="myForm">
-        <form action="#" class="form-container">
-            <h1>What's your name?</h1>
+        <!-- <label class="lName" for="Name">Name</label> -->
+        <input type="text" placeholder="Name" name="Name" id="Name" required>
 
-            <!-- <label class="lName" for="Name">Name</label> -->
-            <input type="text" placeholder="Name" name="Name" id="Name" required>
-
-            <button type="submit" class="btn cancel" onclick="closeForm();">Start</button>
-        </form>
+        <button type="submit" class="btn cancel" onclick="closeForm();">Start</button>
+        <!-- </form> -->
     </div>
     <script>
         let userName = "";
@@ -171,12 +177,14 @@
 
         function openForm() {
             document.getElementById("myForm").style.display = "block";
+            document.getElementById("boody").classList.add("blur");
         }
 
         function closeForm() {
             userName = document.getElementById('Name').value;
             document.getElementById('showUser').innerHTML = userName;
             document.getElementById("myForm").style.display = "none";
+            document.getElementById("boody").classList.remove("blur");
         }
     </script>
 

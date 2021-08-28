@@ -37,12 +37,34 @@ body {
     height: 100%;
 }
 
+.blur {
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
+}
+
 .flex-container {
     display: flex;
     height: 80%;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
 }
 
 .faces {
