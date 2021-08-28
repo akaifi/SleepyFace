@@ -75,16 +75,66 @@
 
 
 
-        <div class="scores"></div>
+        <div class="scores">
+            <h1>Scoure</h1>
+        </div>
 
 
         <div class="sNumber"></div>
-        <div class="user"></div>
+        <div class="user" id="showUser"></div>
 
-        <div class="faces"></div>
+        <div class="faces">
+            <div id='container'>
+                <div id='airhorn'>
+                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                        <div class='inner'>
+                            <div class='center'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='container'>
+                <div id='airhorn'>
+                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                        <div class='inner'>
+                            <div class='center'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='container'>
+                <div id='airhorn'>
+                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                        <div class='inner'>
+                            <div class='center'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='container'>
+                <div id='airhorn'>
+                    <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                        <div class='inner'>
+                            <div class='center'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
     </div>
     <h1>SleepyFace</h1>
+    <!-- <div id='container'>
+        <div id='airhorn'>
+            <div class='horn' role='button' aria-pressed='false' tabindex='1'>
+                <div class='inner'>
+                    <div class='center'></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- The footer with toolbar buttons -->
     <footer data-ui-include="layout/footer" data-ui-options="options.footerBar" data-ui-field="footer-bar"></footer>
 
@@ -102,21 +152,29 @@
     </div>
 
     <div class="form-popup" id="myForm">
-        <!-- <form action="/action_page.php" class="form-container"> -->
-        <h1>Start</h1>
+        <form action="#" class="form-container">
+            <h1>What's your name?</h1>
 
-        <label for="Name"><b>Name</b></label>
-        <input type="text" placeholder="Name" name="Name" required>
+            <!-- <label class="lName" for="Name">Name</label> -->
+            <input type="text" placeholder="Name" name="Name" id="Name" required>
 
-        <button type="submit" class="btn cancel" onclick="closeForm();">Close</button>
+            <button type="submit" class="btn cancel" onclick="closeForm();">Start</button>
         </form>
     </div>
     <script>
-        /* function openForm() {
-                    document.getElementById("myForm").style.display = "block";
-                } */
+        let userName = "";
+        document.addEventListener("DOMContentLoaded", function() {
+            openForm();
+        });
+
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
 
         function closeForm() {
+            userName = document.getElementById('Name').value;
+            document.getElementById('showUser').innerHTML = userName;
             document.getElementById("myForm").style.display = "none";
         }
     </script>
